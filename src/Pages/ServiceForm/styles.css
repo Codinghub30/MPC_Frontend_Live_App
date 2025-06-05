@@ -1,0 +1,102 @@
+.stepper-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.step-number-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 3rem;
+}
+
+.step-number-container:first-child {
+  margin-left: 0;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.step-number.active {
+  background: linear-gradient(135deg, rgb(243, 182, 68), rgb(236, 161, 21));
+  box-shadow: 0 2px 8px rgb(236, 161, 21);
+}
+
+.step-number.completed {
+  background-color: #4caf50;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.6);
+}
+
+.step-line {
+  width: 80px;
+  height: 4px;
+  background-color: #c4c4c4;
+  margin-left: 1.5rem;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.step-line.completed-line {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2e2e2e;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+.inputField {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 2px solid orange;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}

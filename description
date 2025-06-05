@@ -1,0 +1,49 @@
+Machine Coding Challenge: Social Feed App (React + Dummy API)
+🔥 Objective:
+Build a ReactJS application that mimics a basic social media feed using dummy APIs. The app should allow users to:
+
+Fetch and display posts with infinite scroll
+
+Create new posts
+
+Like individual posts
+
+Add and view comments per post
+
+💡 Feature Requirements:
+1. Render All Posts (GET)
+Fetch posts from a dummy API
+
+Show 10 posts per scroll
+
+Implement infinite scrolling when the user scrolls to the bottom
+
+Show: Post Title, Post Body, Like Count, Comment Count, and Buttons
+
+2. Create a Post (POST)
+Show a form modal or section with:
+
+Title
+
+Body
+
+On submit, add post to top of the list
+
+3. Like a Post (PATCH or client-side)
+Allow user to like/unlike each post (toggle)
+
+Store likes in component state (simulate API if not available)
+
+4. Comment on a Post (POST/GET)
+Allow users to:
+
+Add comments under a post
+
+View comments under each post (show/hide toggle)
+
+Each comment should have:
+
+Commenter name (input)
+
+Comment text
+

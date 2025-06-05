@@ -1,0 +1,186 @@
+/* General styling for the entire landing page */
+.landing-page {
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero Section */
+.hero-container {
+  background: linear-gradient(rgba(24, 23, 23, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../../assets/about.jpg") no-repeat center/cover;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #e67e00;
+}
+
+/* Mission Section */
+.mission-container {
+  background: linear-gradient(180deg, #f3dbad 0%, #f8a205 100%);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.success-tailer h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.success-tailer p {
+  font-size: 16px;
+  margin: 0 auto;
+  color: black !important;
+}
+
+/* Vision Section */
+.vision-container {
+  padding: 50px 0;
+  text-align: center;
+  /* background: linear-gradient(rgba(24, 23, 23, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../../assets/about.jpg") no-repeat center/cover; */
+}
+
+.vision-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.vision-container p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Live Counter Section - Grid Layout */
+.live-counter {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px;
+  justify-items: center;
+  padding: 68px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.counter-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 150px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-box h3 {
+  font-size: 50px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.counter-box p {
+  font-size: 18px;
+  color: #444;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Why Us Section */
+.why-us-container {
+  background: linear-gradient(rgba(24, 23, 23, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../../assets/about.jpg") no-repeat center/cover;
+  padding: 50px 0;
+  text-align: center;
+  color: white;
+}
+
+.why-us-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.why-us-container p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Behind Success Section */
+.behind-success-container {
+  background-color: #f0eded;
+  padding: 50px;
+  text-align: center;
+}
+
+.behind-success-container h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.success-tailer {
+  padding: 1rem 8rem;
+}
+
+.success-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.text {
+  width: 60%;
+}
+
+.profile {
+  width: 40%;
+  text-align: center;
+}
+
+.profile img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.profile p {
+  font-size: 1rem;
+  color: gray;
+}
