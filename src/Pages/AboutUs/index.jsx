@@ -139,7 +139,6 @@ function AboutUs() {
                   transform: "translateX(-50%)",
                   fontSize: 120,
                   fontWeight: "bold",
-                  color: "#f59f00",
                   userSelect: "none",
                   zIndex: 0,
                   pointerEvents: "none",

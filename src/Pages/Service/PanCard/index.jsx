@@ -2,13 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ServiceImg from "../../../assets/services.png";
 
-const services = [
-  "Demarcation",
-  "Identification",
-  "Partition",
-  "Revenue Map",
-  "Sketch Map",
-];
+const services = ["Pan Card"];
 
 const steps = [
   "Select Service",
@@ -16,7 +10,7 @@ const steps = [
   "Our Executive Will Contact You Soon",
 ];
 
-const PropertyWork = () => {
+const PanCard = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -36,14 +30,31 @@ const PropertyWork = () => {
     }
   }, [urlService]);
 
-  const handleSelectChange = (e) => {
-    const service = e.target.value;
-    setSelectedService(service);
+  const [panCard, setPanCard] = useState(false);
+  const [panCardCorrect, setPanCardCorrect] = useState(false);
 
-    if (service) {
-      sessionStorage.setItem("Service", service);
-    } else {
-      sessionStorage.removeItem("Service");
+  useEffect(() => {
+    const saved = sessionStorage.getItem("panCard");
+
+    setPanCard(saved);
+  }, []);
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    if (name === "panCard") {
+      setPanCard(checked);
+      if (checked) {
+        sessionStorage.setItem("Service", "NewPanCard");
+      } else {
+        sessionStorage.removeItem("PanCard");
+      }
+    } else if (name === "panCardCorrection") {
+      setPanCardCorrect(checked);
+      if (checked) {
+        sessionStorage.setItem("Service", "NewPanCard");
+      } else {
+        sessionStorage.removeItem("Service");
+      }
     }
   };
 
@@ -71,7 +82,7 @@ const PropertyWork = () => {
       >
         <div style={{ flex: "1 1 400px", minWidth: 300 }}>
           <h1 style={{ fontSize: 28, fontWeight: "bold", marginBottom: 15 }}>
-            {selectedService || "Please select a service"}
+            {selectedService || "Please select a Service"}
           </h1>
           <p style={{ fontSize: 16, marginBottom: 6 }}>
             Your Trusted and Reliable Partner for Seamless Property Solutions
@@ -103,45 +114,76 @@ const PropertyWork = () => {
         </div>
       </div>
 
-      {/* Always show Service Selection dropdown */}
+      {/* PanCard Checkboxes */}
       <div style={{ padding: "30px 80px", maxWidth: 600, margin: "40px auto" }}>
-        <label
-          htmlFor="service-select"
+        <h3 style={{ fontWeight: "700", fontSize: 20 }}>
+          Select Service Type:
+        </h3>
+
+        <div
           style={{
-            display: "block",
-            fontWeight: "700",
-            marginBottom: 8,
-            fontSize: 18,
+            display: "flex",
+            flexDirection: "column",
+            gap: 20,
+            marginTop: 20,
           }}
         >
-          Select Service*
-        </label>
-        <select
-          id="service-select"
-          value={selectedService}
-          onChange={handleSelectChange}
-          style={{
-            width: "100%",
-            padding: "12px 16px",
-            fontSize: 16,
-            borderRadius: 8,
-            border: "1px solid #ccc",
-            appearance: "none",
-            backgroundColor: "#fff",
-            cursor: "pointer",
-          }}
-        >
-          <option value="">Choose</option>
-          {services.map((service, idx) => (
-            <option key={idx} value={service}>
-              {service}
-            </option>
-          ))}
-        </select>
+          <label
+            style={{
+              display: "flex",
+              alignItems: "center",
+              fontSize: 18,
+              fontWeight: "600",
+            }}
+          >
+            <input
+              type="checkbox"
+              name="panCard"
+              checked={panCard}
+              onChange={handleCheckboxChange}
+              style={{ marginRight: 10, width: 24, height: 24 }}
+            />
+            <span
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                color: "#333",
+              }}
+            >
+              New Pan Card
+            </span>
+          </label>
+
+          <label
+            style={{
+              display: "flex",
+              alignItems: "center",
+              fontSize: 18,
+              fontWeight: "600",
+            }}
+          >
+            <input
+              type="checkbox"
+              name="panCardCorrection"
+              checked={panCardCorrect}
+              onChange={handleCheckboxChange}
+              style={{ marginRight: 10, width: 24, height: 24 }}
+            />
+            <span
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                color: "#333",
+              }}
+            >
+              Pan Card Correction
+            </span>
+          </label>
+        </div>
       </div>
 
-      {/* Show steps and Apply button only if a service is selected */}
-      {selectedService && (
+      {/* Show steps and Apply button only if any checkbox is selected */}
+      {panCard && (
         <>
           <div
             style={{
@@ -232,4 +274,4 @@ const PropertyWork = () => {
   );
 };
 
-export default PropertyWork;
+export default PanCard;

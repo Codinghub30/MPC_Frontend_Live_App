@@ -15,6 +15,10 @@ import AboutUs from "./Pages/AboutUs";
 import RealEstate from "./Pages/Service/RealEstate";
 import Csc from "./Pages/Service/Csc";
 import PropertyWork from "./Pages/Service/PropertyWork";
+import Interior from "./Pages/Service/Interior";
+import PanCard from "./Pages/Service/PanCard";
+import DriverLicense from "./Pages/Service/DriverLicence";
+import Agreement from "./Pages/Service/Agreement";
 
 function App() {
   return (
@@ -31,7 +35,15 @@ function App() {
           <Route path="/servicePage/Real Estate" element={<RealEstate />} />
           <Route path="/servicePage/csc" element={<Csc />} />
           <Route path="/servicePage/property work" element={<PropertyWork />} />
+          <Route path="/servicePage/Interior Design" element={<Interior />} />
+          <Route path="/servicePage/Pan Card" element={<PanCard />} />
+          <Route
+            path="/servicePage/Driving License"
+            element={<DriverLicense />}
+          />
+          <Route path="/servicePage/Agreement" element={<Agreement />} />
           <Route path="/servicePage/form" element={<ServiceForm />} />
+
           <Route path="/about-us" element={<AboutUs />} />
           {/* <Route path="/create" element={<CreatePost />} />
           <Route path="/post/:id" element={<PostDetail />} /> */}
