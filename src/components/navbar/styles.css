@@ -84,3 +84,110 @@
   background-color: #f28c00;
   color: white;
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+  padding: 20px;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.drawer-menu > li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.drawer-submenu {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+.drawer-submenu li {
+  margin: 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.drawer-menu > li {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 16px 0;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.drawer-menu > li:hover {
+  background-color: #f4f4f4;
+}
+
+.drawer-collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-submenu {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.drawer-submenu li {
+  font-size: 15px;
+  margin: 8px 0;
+  padding: 8px;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+}
+
+.drawer-submenu li:hover {
+  background-color: #f2f2f2;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Why = () => {
   const reasons = [
@@ -27,6 +28,8 @@ const Why = () => {
         "Our wide range of services and tailored solutions are designed to meet your unique needs, ensuring convenience and satisfaction from start to finishx",
     },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div
@@ -116,7 +119,7 @@ const Why = () => {
             cursor: "pointer",
             letterSpacing: 1,
           }}
-          onClick={() => alert("Contact us for more details!")}
+          onClick={() => navigate("/contact-us")}
         >
           CONTACT US
         </button>

@@ -18,12 +18,9 @@ import land from "../../assets/land.png";
 import map from "../../assets/map.png";
 import property from "../../assets/property.png";
 import Why from "./components/Why";
+import Faq from "../../components/Faq";
 
 const services = [
-  // { id: 1, icon: certificate, label: "Resident Certificate" },
-  // { id: 2, icon: certificate1, label: "Caste Certificate" },
-  // { id: 3, icon: certificate2, label: "Income Certificate" },
-  // { id: 4, icon: certificate3, label: "Legal Heir Certificate" },
   { id: 1, icon: certificate, label: "CSC" },
   { id: 2, icon: land, label: "Real Estate" },
   { id: 3, icon: certificate2, label: "Property Work" },
@@ -34,12 +31,6 @@ const services = [
   { id: 8, icon: conversion, label: "Agreement" },
   { id: 9, icon: certificate1, label: "BDA and BMC Work" },
   { id: 10, icon: map, label: "Architectural Work" },
-  // { id: 7, icon: pauti, label: "Pauti" },
-  // { id: 8, icon: mutation, label: "Mutation" },
-  // { id: 9, icon: conversion, label: "Conversion" },
-  // { id: 10, icon: land, label: "Demarcation" },
-  // { id: 11, icon: map, label: "Revenue Map and Sketch Map" },
-  // { id: 12, icon: property, label: "Property Partition" },
 ];
 
 const Home = () => {
@@ -84,6 +75,7 @@ const Home = () => {
       </section>
       <HowItWorks />
       <Why />
+      <Faq />
       <Associated />
     </div>
   );

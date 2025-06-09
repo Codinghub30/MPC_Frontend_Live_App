@@ -1,0 +1,22 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.content-container .email-container {
+  background-color: green;
+  padding: 1rem 5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 25rem;
+  text-align: center;
+}
+
+.content-container .phone-container {
+  background-color: green;
+  padding: 1rem 5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 25rem;
+  text-align: center;
+}

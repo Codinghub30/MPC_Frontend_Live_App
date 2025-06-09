@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles.css";
 import authService from "../../../api/authService";
 
@@ -18,15 +18,10 @@ const formFields = {
     { label: "Enter Zip Code", name: "zip" },
     { label: "Enter Country", name: "country" },
   ],
-  4: [
-    { label: "Enter Father's Name", name: "fatherName" },
-    { label: "Enter Mothers Name", name: "motherName" },
-    { label: "Enter Work Email", name: "workEmail" },
-  ],
 };
 
-const FormPart = ({ step }) => {
-  const totalSteps = Object.keys(formFields).length;
+const FormPart = ({ step, totalSteps, nextStep, prevStep }) => {
+  // const totalSteps = Object.keys(formFields).length;
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -37,10 +32,19 @@ const FormPart = ({ step }) => {
     state: "",
     zip: "",
     country: "",
-    fatherName: "",
-    motherName: "",
-    workEmail: "",
+    workType: "",
   });
+
+  const savedService = sessionStorage.getItem("Service");
+
+  useEffect(() => {
+    if (savedService) {
+      setFormData((prev) => ({
+        ...prev,
+        workType: savedService,
+      }));
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -50,8 +54,11 @@ const FormPart = ({ step }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const payload = { ...formData };
-    console.log("check this");
+
+    const payload = {
+      ...formData,
+      workType: savedService || formData.workType, // Prefer session if available
+    };
 
     try {
       const res = await authService.createBooking(payload);
@@ -66,10 +73,7 @@ const FormPart = ({ step }) => {
         state: "",
         zip: "",
         country: "",
-        fatherName: "",
-        motherName: "",
-        workEmail: "",
-        serviceType: "",
+        workType: "",
       });
     } catch (error) {
       console.error("Error creating booking:", error);
@@ -77,7 +81,10 @@ const FormPart = ({ step }) => {
     }
   };
   const fields = formFields[step] || [];
-
+  const isStepValid = () => {
+    const fields = formFields[step];
+    return fields.every((field) => formData[field.name] !== "");
+  };
   return (
     <form className="multi-step-form">
       <div className="form-container">
@@ -116,7 +123,36 @@ const FormPart = ({ step }) => {
           </div>
         ))}
       </div>
-
+      <div>
+        <button
+          onClick={prevStep}
+          disabled={step === 1}
+          style={{
+            marginLeft: 10,
+            padding: "0.4rem 0.8rem",
+            backgroundColor: step === 1 ? "#a5a3a3" : "orange",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          Previous
+        </button>
+        <button
+          onClick={nextStep}
+          disabled={step === totalSteps || !isStepValid()}
+          style={{
+            marginLeft: 10,
+            padding: "0.4rem 0.8rem",
+            backgroundColor: !isStepValid() ? "#a5a3a3" : "orange",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          Next
+        </button>
+      </div>
       <div
         style={{
           marginTop: 20,

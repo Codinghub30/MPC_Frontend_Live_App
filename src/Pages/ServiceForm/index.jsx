@@ -3,7 +3,7 @@ import Stepper from "./components/Stepper";
 import FormPart from "./components/FormPart";
 
 const ServiceForm = () => {
-  const totalSteps = 4;
+  const totalSteps = 3;
   const [activeStep, setActiveStep] = useState(1);
 
   const nextStep = () => {
@@ -17,7 +17,12 @@ const ServiceForm = () => {
   return (
     <div style={{ maxWidth: 600, margin: "2rem auto", padding: "1rem" }}>
       <Stepper totalSteps={totalSteps} activeStep={activeStep} />
-      <FormPart step={activeStep} totalSteps={totalSteps} />
+      <FormPart
+        step={activeStep}
+        totalSteps={totalSteps}
+        nextStep={nextStep}
+        prevStep={prevStep}
+      />
 
       <div
         style={{
@@ -25,38 +30,7 @@ const ServiceForm = () => {
           display: "flex",
           justifyContent: "space-between",
         }}
-      >
-        <div>
-          <button
-            onClick={prevStep}
-            disabled={activeStep === 1}
-            style={{
-              marginLeft: 10,
-              padding: "0.4rem 0.8rem",
-              backgroundColor: "orange",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-            }}
-          >
-            Previous
-          </button>
-          <button
-            onClick={nextStep}
-            disabled={activeStep === totalSteps}
-            style={{
-              marginLeft: 10,
-              padding: "0.4rem 0.8rem",
-              backgroundColor: "orange",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-            }}
-          >
-            Next
-          </button>
-        </div>
-      </div>
+      ></div>
     </div>
   );
 };

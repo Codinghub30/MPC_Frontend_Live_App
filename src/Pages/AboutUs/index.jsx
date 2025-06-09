@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Profile from "../../assets/profile.jpg";
 import "./styles.css";
+import Faq from "../../components/Faq";
 
 function AboutUs() {
   const [counter, setCounter] = useState({
@@ -220,6 +221,7 @@ function AboutUs() {
           many. We work with passion and purpose.
         </p>
       </div>
+      <Faq />
     </div>
   );
 }
