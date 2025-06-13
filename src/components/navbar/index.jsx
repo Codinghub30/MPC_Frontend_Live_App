@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="logo-container" onClick={() => navigate("/")}>
           <img src={Logo} alt="Logo" className="logo-image" />
           <div>
-            <span className="logo-text-primary">MPC</span>
+            <span className="logo-text-primary">MatruShakti Property</span>
             <br />
             <span className="logo-text-secondary">Consultancy</span>
           </div>

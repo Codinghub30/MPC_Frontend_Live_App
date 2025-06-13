@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 import slider1 from "../../assets/image1.jpg";
 import slider2 from "../../assets/image2.jpg";
-import slider3 from "../../assets/image3.jpg";
-import slider4 from "../../assets/image4.jpg";
+import slider3 from "../../assets/img22.jpg";
+import slider4 from "../../assets/image23.jpg";
 import Why from "../Home/components/Why";
 import Faq from "../../components/Faq";
+import { useNavigate } from "react-router-dom";
 
 const ImageGallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [slider1, slider2, slider3, slider4];
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,7 +75,9 @@ const ImageGallery = () => {
       <section className="gallery-cta">
         <h2>Like what you see?</h2>
         <p>Let’s work together on your next project.</p>
-        <button className="cta-btn">Get in Touch</button>
+        <button className="cta-btn" onClick={() => navigate("/contact-us")}>
+          Get in Touch
+        </button>
       </section>
 
       <Faq />

@@ -58,11 +58,47 @@ function AboutUs() {
   return (
     <div className="landing-page">
       {/* Hero Section */}
+
       <div className="hero-container">
         <div className="hero-content">
           <h1>We Work for a Better Future</h1>
           <p>Your trusted partner for making a difference</p>
           <button className="cta-button">Get Involved</button>
+        </div>
+      </div>
+      {/* Live Counter Section */}
+      <div style={{ position: "fixed", zIndex: "-1" }}>
+        <a
+          href="https://wa.me/919348386116"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-float"
+        >
+          <img
+            src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+            alt="Chat on WhatsApp"
+          />
+        </a>
+      </div>
+
+      <div className="vision-container" style={{ textAlign: "center" }}>
+        <div className="live-counter">
+          <div className="counter-box">
+            <h3>{counter.cooperations}+</h3>
+            <p>Sales</p>
+          </div>
+          <div className="counter-box">
+            <h3>{counter.candidates}+</h3>
+            <p>Documents Applied</p>
+          </div>
+          <div className="counter-box">
+            <h3>{counter.permanentEmployees}+</h3>
+            <p>Happy Customers</p>
+          </div>
+          <div className="counter-box">
+            <h3>{counter.countries}+</h3>
+            <p>Plot Sold</p>
+          </div>
         </div>
       </div>
 
@@ -185,31 +221,6 @@ function AboutUs() {
           >
             CONTACT US
           </button>
-        </div>
-      </div>
-
-      {/* Live Counter Section */}
-      <div
-        className="vision-container"
-        style={{ textAlign: "center", padding: "40px 0" }}
-      >
-        <div className="live-counter">
-          <div className="counter-box">
-            <h3>{counter.cooperations}+</h3>
-            <p>Sales</p>
-          </div>
-          <div className="counter-box">
-            <h3>{counter.candidates}+</h3>
-            <p>Documents Applied</p>
-          </div>
-          <div className="counter-box">
-            <h3>{counter.permanentEmployees}+</h3>
-            <p>Happy Customers</p>
-          </div>
-          <div className="counter-box">
-            <h3>{counter.countries}+</h3>
-            <p>Plot Sold</p>
-          </div>
         </div>
       </div>
 

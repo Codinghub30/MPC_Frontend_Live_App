@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import Associated from "./components/Associated";
 import { useNavigate } from "react-router-dom";
@@ -27,14 +27,32 @@ const services = [
   { id: 4, icon: property, label: "Interior Design" },
   { id: 5, icon: certificate3, label: "Pan Card" },
   { id: 6, icon: card, label: "Driving License" },
-  { id: 7, icon: pauti, label: "Affidatives" },
+  { id: 7, icon: pauti, label: "Affidavite" },
   { id: 8, icon: conversion, label: "Agreement" },
   { id: 9, icon: certificate1, label: "BDA and BMC Work" },
   { id: 10, icon: map, label: "Architectural Work" },
 ];
 
 const Home = () => {
+  const [searchQuery, setSearchQuery] = useState(""); // State to capture search query
   const navigate = useNavigate();
+
+  const handleSearch = () => {
+    const service = searchQuery.trim().toLowerCase();
+
+    const getService = services.find((item) =>
+      item.label.toLowerCase().includes(service)
+    );
+    if (getService) {
+      navigate(`/servicePage/${getService.label.toLowerCase()}`);
+    } else {
+      // Handle case where service is not found
+      alert(
+        "Service not found! Please check the spelling or try a different search."
+      );
+    }
+  };
+
   return (
     <div className="home-container">
       <header className="hero-section">
@@ -48,7 +66,54 @@ const Home = () => {
             className="search-input"
             type="text"
             placeholder="Find and prepare your documents with ease!"
+            value={searchQuery} // Controlled input field
+            onChange={(e) => setSearchQuery(e.target.value)} // Update searchQuery state
           />
+          {/* Search Button */}
+          <button
+            style={{
+              border: "none",
+              padding: "0.5rem 1.7rem",
+              marginTop: "1rem",
+              borderRadius: "2rem",
+              cursor: "pointer",
+            }}
+            onClick={handleSearch}
+            className="search-button"
+          >
+            Search
+          </button>
+
+          <div className="wp-number">
+            <div>
+              <a
+                href="https://wa.me/919348386116"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-float"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+                  alt="Chat on WhatsApp"
+                  style={{ width: "2rem" }}
+                />
+              </a>
+            </div>
+            <a
+              href="https://wa.me/919348386116"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-float"
+              style={{
+                fontSize: "12px",
+                textAlign: "end",
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
+              +91 93483 86116{" "}
+            </a>
+          </div>
         </div>
         <div className="hero-right">
           <img

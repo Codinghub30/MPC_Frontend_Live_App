@@ -64,3 +64,32 @@ footer {
   font-size: 0.85rem;
   color: #666;
 }
+
+.footer-links-with-map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-links-with-map > div {
+  flex: 1;
+  min-width: 180px;
+}
+
+.map-column iframe {
+  border-radius: 8px;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .footer-links {
+    padding-left: 8.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    padding-left: 4.2rem;
+  }
+}

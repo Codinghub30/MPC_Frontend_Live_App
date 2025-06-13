@@ -26,6 +26,21 @@ const ContactUs = () => {
         }}
       ></div>
 
+      {/* WhatsApp */}
+      <div style={{ position: "fixed" }}>
+        <a
+          href="https://wa.me/919348386116"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="whatsapp-float"
+        >
+          <img
+            src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+            alt="Chat on WhatsApp"
+          />
+        </a>
+      </div>
+
       {/* Title & Buttons */}
       <div
         style={{
@@ -35,11 +50,9 @@ const ContactUs = () => {
           padding: "40px 20px",
         }}
       >
-        <h4 style={{ marginBottom: "80px", fontSize: "2rem" }}>Contact Us</h4>
-
         <div
           className="content-container"
-          style={{ display: "flex", gap: "20px" }}
+          style={{ display: "flex", gap: "20px", marginTop: "5rem" }}
         >
           <div
             className="email-container"
@@ -84,10 +97,13 @@ const ContactUs = () => {
         {activeTab && (
           <div style={{ marginTop: "30px", textAlign: "center" }}>
             {activeTab === "email" && (
-              <p style={{ fontSize: "18px" }}>📧 mpconline7@gmail.com</p>
+              <p style={{ fontSize: "18px" }}>📧 cscdurga2021@gmail.com</p>
             )}
             {activeTab === "phone" && (
-              <p style={{ fontSize: "18px" }}>📞 +91-9876543210</p>
+              <p style={{ fontSize: "18px" }}>
+                📞 +91 98613 57713 <br />
+                📞 +91 93483 86116
+              </p>
             )}
           </div>
         )}

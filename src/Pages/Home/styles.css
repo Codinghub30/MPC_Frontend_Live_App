@@ -60,6 +60,12 @@
   margin-right: -58px;
 }
 
+.wp-number {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.3rem;
+}
 /* Services section */
 
 .services-section {
@@ -108,17 +114,26 @@
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .hero-section {
     flex-direction: column;
     padding: 20px 30px;
+    height: 33rem;
   }
 
   .hero-left {
     max-width: 100%;
     text-align: center;
+    margin-top: 5rem;
+    margin-right: 3rem;
   }
 
+  .hero-left h1 {
+    font-size: 24px;
+  }
+  .hero-left p {
+    font-size: 18px;
+  }
   .search-input {
     max-width: 100%;
   }
@@ -126,5 +141,8 @@
   .hero-right {
     max-width: 100%;
     margin-top: 30px;
+  }
+  .wp-number {
+    display: none;
   }
 }

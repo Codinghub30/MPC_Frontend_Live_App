@@ -23,6 +23,8 @@ import Bda from "./Pages/Service/Bda";
 import Architectural from "./Pages/Service/Architectural";
 import ContactUs from "./Pages/ContactUs";
 import ImageGallery from "./Pages/ImageGallery";
+import ScrollTop from "./components/ScrollTop";
+import Affidavite from "./Pages/Service/Affidavite";
 
 function App() {
   return (
@@ -30,7 +32,7 @@ function App() {
       <Navbar />
       <div>
         <ToastContainer position="top-right" autoClose={3000} />
-
+        <ScrollTop />
         <Routes>
           {/* <Route path="/" element={<Feed />} /> */}
           <Route path="/signup" element={<SignUp />} />
@@ -51,10 +53,13 @@ function App() {
             path="/servicePage/Architectural Work"
             element={<Architectural />}
           />
+          <Route path="/servicePage/affidavite" element={<Affidavite />} />
+
           <Route path="/servicePage/form" element={<ServiceForm />} />
 
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/image-gallery" element={<ImageGallery />} />
           <Route path="/image-gallery" element={<ImageGallery />} />
           {/* <Route path="/create" element={<CreatePost />} />
           <Route path="/post/:id" element={<PostDetail />} /> */}

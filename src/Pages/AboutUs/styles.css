@@ -55,7 +55,6 @@
 
 /* Vision Section */
 .vision-container {
-  padding: 50px 0;
   text-align: center;
   /* background: linear-gradient(rgba(24, 23, 23, 0.8), rgba(0, 0, 0, 0.5)),
     url("../../assets/about.jpg") no-repeat center/cover; */
@@ -149,7 +148,7 @@
 }
 
 .success-tailer {
-  padding: 1rem 8rem;
+  /* padding: 1rem 8rem; */
 }
 
 .success-content {
@@ -193,5 +192,10 @@
   .live-counter {
     display: flex;
     flex-direction: column;
+  }
+
+  .text {
+    width: 100%;
+    margin-bottom: 4rem;
   }
 }
