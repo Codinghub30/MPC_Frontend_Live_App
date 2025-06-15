@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ServiceImg from "../../../assets/services.png";
+import Why from "../../Home/components/Why";
+import "./styles.css";
 
 const services = ["Affidavite"];
 
@@ -62,7 +64,7 @@ const Affidavite = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "40px 80px",
+          padding: "40px 55px",
           background: "linear-gradient(to bottom, #f9d976, #f39f2a)",
           color: "#000",
           borderRadius: "0 0 20px 20px",
@@ -99,7 +101,8 @@ const Affidavite = () => {
           <img
             src={ServiceImg}
             alt="Hand holding house"
-            style={{ maxWidth: "100%", height: "auto", borderRadius: 10 }}
+            className="serviceBanner"
+            style={{ height: "auto", borderRadius: 10 }}
           />
         </div>
       </div>
@@ -196,15 +199,16 @@ const Affidavite = () => {
                 {/* Horizontal line between steps */}
                 {index !== steps.length - 1 && (
                   <div
-                    style={{
-                      position: "absolute",
-                      top: 40,
-                      right: "-76px",
-                      width: "144px",
-                      height: "4px",
-                      backgroundColor: "#f39f2a",
-                      zIndex: 0,
-                    }}
+                    className="horizontal"
+                    // style={{
+                    //   position: "absolute",
+                    //   top: 40,
+                    //   right: "-76px",
+                    //   width: "144px",
+                    //   height: "4px",
+                    //   backgroundColor: "#f39f2a",
+                    //   zIndex: 0,
+                    // }}
                   />
                 )}
               </div>
@@ -234,6 +238,7 @@ const Affidavite = () => {
           </div>
         </>
       )}
+      <Why />
     </div>
   );
 };

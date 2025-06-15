@@ -233,6 +233,17 @@ function AboutUs() {
         </p>
       </div>
       <Faq />
+      <a
+        href="https://wa.me/919348386116"
+        className="whatsapp-floating"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+          alt="Chat on WhatsApp"
+        />
+      </a>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.horizontal {
+  position: absolute;
+  top: 40px;
+  right: -76px;
+  width: 144px;
+  height: 4px;
+  background-color: #f39f2a;
+  z-index: 0;
+}
+
+.serviceBanner {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .horizontal {
+    top: 111px;
+    width: 4px;
+    height: 4rem;
+    right: 171px;
+  }
+  .serviceBanner {
+    max-width: 44%;
+  }
+}

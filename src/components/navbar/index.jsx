@@ -11,7 +11,7 @@ const services = [
   { id: 4, label: "Interior Design" },
   { id: 5, label: "Pan Card" },
   { id: 6, label: "Driving License" },
-  { id: 7, label: "Affidatives" },
+  { id: 7, label: "Affidavite" },
   { id: 8, label: "Agreement" },
   { id: 9, label: "BDA and BMC Work" },
   { id: 10, label: "Architectural Work" },

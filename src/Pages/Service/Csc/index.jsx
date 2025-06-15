@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import ServiceImg from "../../../assets/services.png";
+import Why from "../../Home/components/Why";
 
 const services = [
   "Resident Certificate",
@@ -60,7 +61,7 @@ const Csc = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          padding: "40px 80px",
+          padding: "40px 56px",
           background: "linear-gradient(to bottom, #f9d976, #f39f2a)",
           color: "#000",
           borderRadius: "0 0 20px 20px",
@@ -68,9 +69,9 @@ const Csc = () => {
           flexWrap: "wrap",
         }}
       >
-        <div style={{ flex: "1 1 400px", minWidth: 300, marginTop: "2.5rem" }}>
+        <div style={{ flex: "1 1 400px", minWidth: 300 }}>
           <h1 style={{ fontSize: 28, fontWeight: "bold", marginBottom: 15 }}>
-            {selectedService || "Please select a service"}
+            {selectedService || "Please select a CSC service Type"}
           </h1>
           <p style={{ fontSize: 16, marginBottom: 6 }}>
             Your Trusted and Reliable Partner for Seamless Property Solutions
@@ -96,8 +97,9 @@ const Csc = () => {
         <div style={{ flex: "0 0 300px", textAlign: "right", minWidth: 250 }}>
           <img
             src={ServiceImg}
+            className="serviceBanner"
             alt="Hand holding house"
-            style={{ maxWidth: "100%", height: "auto", borderRadius: 10 }}
+            style={{ height: "auto", borderRadius: 10 }}
           />
         </div>
       </div>
@@ -187,19 +189,7 @@ const Csc = () => {
                 </p>
 
                 {/* Horizontal line between steps */}
-                {index !== steps.length - 1 && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 40,
-                      right: "-76px",
-                      width: "144px",
-                      height: "4px",
-                      backgroundColor: "#f39f2a",
-                      zIndex: 0,
-                    }}
-                  />
-                )}
+                {index !== steps.length - 1 && <div className="horizontal" />}
               </div>
             ))}
           </div>
@@ -227,6 +217,7 @@ const Csc = () => {
           </div>
         </>
       )}
+      <Why />
     </div>
   );
 };

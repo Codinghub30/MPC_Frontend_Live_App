@@ -27,7 +27,7 @@ const ContactUs = () => {
       ></div>
 
       {/* WhatsApp */}
-      <div style={{ position: "fixed" }}>
+      {/* <div style={{ position: "fixed" }}>
         <a
           href="https://wa.me/919348386116"
           target="_blank"
@@ -39,7 +39,7 @@ const ContactUs = () => {
             alt="Chat on WhatsApp"
           />
         </a>
-      </div>
+      </div> */}
 
       {/* Title & Buttons */}
       <div
@@ -110,6 +110,17 @@ const ContactUs = () => {
       </div>
       <Why />
       <Faq />
+      <a
+        href="https://wa.me/919348386116"
+        className="whatsapp-floating"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+          alt="Chat on WhatsApp"
+        />
+      </a>
     </div>
   );
 };

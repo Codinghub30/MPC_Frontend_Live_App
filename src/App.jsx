@@ -32,7 +32,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div>
+      <div style={{ marginTop: "5rem" }}>
         <ToastContainer position="top-right" autoClose={3000} />
         <ScrollTop />
         <Routes>
