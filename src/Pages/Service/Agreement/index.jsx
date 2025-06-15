@@ -93,7 +93,7 @@ const Agreement = () => {
           flexWrap: "wrap",
         }}
       >
-        <div style={{ flex: "1 1 400px", minWidth: 300 }}>
+        <div style={{ flex: "1 1 400px", minWidth: 300, marginTop: "2.5rem" }}>
           <h1 style={{ fontSize: 28, fontWeight: "bold", marginBottom: 15 }}>
             {selectedService || "Please select a Service"}
           </h1>

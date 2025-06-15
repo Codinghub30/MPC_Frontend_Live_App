@@ -20,17 +20,18 @@
 .hero-left {
   max-width: 600px;
   margin-left: 2rem;
+  margin-top: 5rem;
 }
 
 .hero-left h1 {
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 16px;
 }
 
 .hero-left p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   margin: 6px 0;
 }
 
@@ -111,6 +112,26 @@
 .service-card:hover .icon-container {
   box-shadow: 0 0 10px #f8a205;
 }
+.whatsapp-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-floating img {
+  width: 48px;
+  height: 48px;
+}
+
+.whatsapp-floating:hover {
+  transform: scale(1.1);
+}
 
 /* Responsive */
 
@@ -120,11 +141,13 @@
     padding: 20px 30px;
     height: 33rem;
   }
-
+  .hero-image {
+    display: none;
+  }
   .hero-left {
     max-width: 100%;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 5.5rem;
     margin-right: 3rem;
   }
 

@@ -25,6 +25,8 @@ import ContactUs from "./Pages/ContactUs";
 import ImageGallery from "./Pages/ImageGallery";
 import ScrollTop from "./components/ScrollTop";
 import Affidavite from "./Pages/Service/Affidavite";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
+import TermsAndCondition from "./Pages/TermsAndCondition";
 
 function App() {
   return (
@@ -61,6 +63,8 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/image-gallery" element={<ImageGallery />} />
           <Route path="/image-gallery" element={<ImageGallery />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndCondition />} />
           {/* <Route path="/create" element={<CreatePost />} />
           <Route path="/post/:id" element={<PostDetail />} /> */}
         </Routes>

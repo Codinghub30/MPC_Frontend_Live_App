@@ -93,7 +93,7 @@ const Why = () => {
             </div>
 
             {/* Foreground content */}
-            <div style={{ position: "relative", zIndex: 1, marginTop: "4rem" }}>
+            <div style={{ position: "relative", zIndex: 1, marginTop: "6rem" }}>
               <>
                 <h3 style={{ marginBottom: 15, fontWeight: "bold" }}>
                   {title}

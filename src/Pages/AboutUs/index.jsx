@@ -23,9 +23,9 @@ function AboutUs() {
           (prevCounter.permanentEmployees < 180 ? 1 : 0),
         countries: prevCounter.countries + (prevCounter.countries < 13 ? 1 : 0),
       }));
-    }, 20); // Update every 20ms for smooth animation
+    }, 20);
 
-    return () => clearInterval(interval); // Clear interval when the component is unmounted
+    return () => clearInterval(interval);
   }, []);
 
   const reasons = [
@@ -120,7 +120,7 @@ function AboutUs() {
 
           <div className="profile">
             <img src={Profile} alt="Chris Spring" className="profile-image" />
-            <h3>Chris Spring</h3>
+            <h3>Durga Charan Sahoo</h3>
             <p>CEO & Founder</p>
           </div>
         </div>

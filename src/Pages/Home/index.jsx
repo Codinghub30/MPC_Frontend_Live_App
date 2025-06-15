@@ -57,11 +57,12 @@ const Home = () => {
     <div className="home-container">
       <header className="hero-section">
         <div className="hero-left">
-          <h1>#1* Real Estate and Expert Document Services.</h1>
+          <h1>Welcome to MatruShakti Property Consultancy - MPC</h1>
           <p>
-            Your Trusted and Reliable Partner for Seamless Property Solutions
+            We are Bhubaneswar’s most trusted name for property documentation,
+            rental agreements, and end-to-end real estate support.
           </p>
-          <p>Effortless Documentation Apply, Reliable Support Every Step</p>
+
           <input
             className="search-input"
             type="text"
@@ -141,6 +142,18 @@ const Home = () => {
       <HowItWorks />
       <Why />
       <Faq />
+      <a
+        href="https://wa.me/919348386116"
+        className="whatsapp-floating"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+          alt="Chat on WhatsApp"
+        />
+      </a>
+
       <Associated />
     </div>
   );

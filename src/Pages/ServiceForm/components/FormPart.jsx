@@ -62,7 +62,21 @@ const FormPart = ({ step, totalSteps, nextStep, prevStep }) => {
 
     try {
       const res = await authService.createBooking(payload);
-      alert("Booking created successfully");
+      const formspreeRes = await fetch("https://formspree.io/f/xblyjbdp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      if (formspreeRes.ok) {
+        alert("Booking created and email sent successfully!");
+      } else {
+        const errorRes = await formspreeRes.json();
+        console.error("Formspree Error:", errorRes);
+        alert("Booking created, but failed to send email.");
+      }
       setFormData({
         fullName: "",
         phone: "",

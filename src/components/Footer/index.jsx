@@ -24,19 +24,30 @@ const Footer = () => {
           <div>
             <h4>Legal</h4>
             <ul>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Disclaimer</li>
+              <li onClick={() => navigate("/terms")}>Terms & Conditions</li>
+              <li onClick={() => navigate("privacy-policy")}>Privacy Policy</li>
             </ul>
           </div>
           <div>
             <h4>Follow Us</h4>
             <ul className="social-icons">
               <li>
-                <i className="fab fa-facebook-f" />
+                <a
+                  href="https://youtube.com/@mpconline-j8p?si=xdSyaycsD3uZBdPD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-youtube" style={{ color: "black" }} />
+                </a>
               </li>
               <li>
-                <i className="fab fa-instagram" />
+                <a
+                  href="https://www.instagram.com/mpc.bbsr?igsh=OWd1eWtiaHczOGNq&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram" style={{ color: "black" }} />
+                </a>
               </li>
             </ul>
           </div>
